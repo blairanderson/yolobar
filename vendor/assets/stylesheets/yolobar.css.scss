@@ -1,0 +1,77 @@
+$notificationBgColor: #1E90FF !default;
+$notificationColor: #FFF !default;
+$notificationBorderColor: lighten($notificationBgColor, 5%) !default;
+
+$warningBgColor: #C09853 !default;
+$warningColor: #FCF8E3 !default;
+$warningBorderColor: lighten($warningBgColor, 5%) !default;
+
+$errorBgColor: #B94A48 !default;
+$errorColor: #F2DEDE !default;
+$errorBorderColor: lighten($errorBgColor, 5%) !default;
+
+.notification.notice {
+  background-color: $notificationBgColor;
+  color: $notificationColor;
+  border-bottom: 1px solid $notificationBorderColor;
+}
+
+.notification.warning {
+  background-color: $warningBgColor;
+  color: $warningColor;
+  border-bottom: 1px solid $warningBorderColor;
+}
+
+.notification.error {
+  background-color: $errorBgColor;
+  color: $errorColor;
+  border-bottom: 1px solid $errorBorderColor;
+}
+
+.yolobar {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  left: 0px;
+  z-index: 9999999;
+  margin: 0px;
+  padding: .5em;
+}
+
+.yolobar-top {
+  top: 0px;
+}
+
+.yolobar-bottom {
+  bottom: 0px;
+  color: #777;
+}
+
+.yolobar-content {
+  line-height: 46px;
+  font-size: 18px;
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+a.yolobar-cross {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  background: transparent url(/assets/cross.png) no-repeat top left;
+  cursor: pointer;
+  right: 25px;
+  float: right;
+}
+
+
+a.yolobar-cross:hover {
+  background-image: url(/assets/cross_hover.png)
+}
+
+.yolobar-top a.yolobar-cross {
+  top: 8px;
+}
+
+.yolobar-bottom a.yolobar-cross {
+  bottom: 8px;
+}
